@@ -1,4 +1,5 @@
 import inspect
+
 from findex.stats import iter_documents
 from findex.tokenize import tokenize
 

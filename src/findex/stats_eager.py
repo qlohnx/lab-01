@@ -1,9 +1,8 @@
 import argparse
-import bz2
 import itertools
-from collections import Counter
 import time
 import tracemalloc
+from collections import Counter
 from pathlib import Path
 
 from findex.stats import iter_wiki_pages
