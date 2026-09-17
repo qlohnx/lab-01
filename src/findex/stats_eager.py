@@ -5,7 +5,7 @@ import tracemalloc
 from collections import Counter
 from pathlib import Path
 
-from findex.stats import iter_wiki_pages
+from findex.stats import iter_documents
 from findex.tokenize import tokenize
 
 
@@ -18,7 +18,7 @@ def collect_stats_eager(data_dir: Path, limit: int | None = None):
     file_path = bz2_files[0]
 
     # 1. Жадібно читаємо всі документи генератора у звичайний список у пам'яті
-    doc_generator = iter_wiki_pages(file_path)
+    doc_generator = iter_documents(file_path)
     if limit is not None:
         doc_generator = itertools.islice(doc_generator, limit)
 
